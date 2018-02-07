@@ -67,19 +67,27 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   display: block;
 }
 
-/* line 16, ../sass/screen.scss */
+/* line 11, ../sass/screen.scss */
 html,
-body {
-  margin: 0;
-  padding: 0;
-  height: 100%;
+body, #sphere {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-/* line 27, ../sass/screen.scss */
+/* line 25, ../sass/screen.scss */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, serif;
+  font-size: 21.73913px;
+  height: 100%;
+}
+
+/* line 36, ../sass/screen.scss */
 .key {
+  position: relative;
   height: 170px;
   width: 320px;
   background-color: rgba(0, 0, 0, 0.15);
@@ -89,8 +97,9 @@ body {
   -o-border-radius: 85px;
   border-radius: 85px;
 }
-/* line 32, ../sass/screen.scss */
+/* line 42, ../sass/screen.scss */
 .key .key-item {
+  position: absolute;
   height: inherit;
   width: 50%;
   background-color: rgba(0, 0, 0, 0.25);
@@ -99,4 +108,53 @@ body {
   -ms-border-radius: 50%;
   -o-border-radius: 50%;
   border-radius: 50%;
+}
+/* line 48, ../sass/screen.scss */
+.key .key-item:hover {
+  cursor: pointer;
+}
+
+@keyframes upDownToggleFade {
+  0%, 100% {
+    transform: scale(1, 1);
+    background-position: 0% 50%;
+  }
+  50% {
+    transform: scale(0.9, 0.9);
+    background-position: 100% 50%;
+  }
+}
+/* line 65, ../sass/screen.scss */
+#sphere {
+  height: 100px;
+  width: 100px;
+  background: linear-gradient(-45deg, #EE7752, #E73C7E, #23A6D5, #23D5AB);
+  background-size: 400% 400%;
+  transition: all 600ms;
+  overflow: hidden;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-radius: 50%;
+}
+/* line 74, ../sass/screen.scss */
+#sphere:hover {
+  animation: upDownToggleFade 3s infinite;
+  transition: all 600ms;
+  cursor: pointer;
+}
+/* line 78, ../sass/screen.scss */
+#sphere:hover:after {
+  content: "Hovered";
+}
+/* line 82, ../sass/screen.scss */
+#sphere:after {
+  content: "Hoverme";
+}
+
+/* line 87, ../sass/screen.scss */
+.toggled {
+  right: 0;
+  background-color: #9FE1C3;
 }
