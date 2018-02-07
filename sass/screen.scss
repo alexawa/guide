@@ -1,0 +1,38 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+@import "compass/reset";
+
+@mixin border-radius($radius) {
+	-webkit-border-radius: $radius;
+	-moz-border-radius: $radius;
+	-ms-border-radius: $radius;
+	-o-border-radius: $radius;
+	border-radius: $radius;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.key {
+	height: 170px;
+	width: 320px;
+	background-color: rgba(0,0,0,.15);
+	@include border-radius(85px);
+	.key-item {
+		height: inherit;
+		width: 50%;
+		background-color: rgba(0,0,0,.25);
+		@include border-radius(50%);
+	}
+}
