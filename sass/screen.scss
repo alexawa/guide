@@ -4,87 +4,59 @@
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
 
 @import "compass/reset";
-
-$in: 'Hover';
-$fontSize: 25;
-
-%equal-display {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
-
-@mixin border-radius($radius) {
-	-webkit-border-radius: $radius;
-	-moz-border-radius: $radius;
-	-ms-border-radius: $radius;
-	-o-border-radius: $radius;
-	border-radius: $radius;
-}
+@import "variables.scss";
+@import "includes.scss";
 
 html,
 body {
 	margin: 0;
 	padding: 0;
 	font-family: Arial, serif;
-	font-size: $fontSize / 1.15 + px ;
 
 	height: 100%;
-	@extend %equal-display;
 }
 
-.key {
+#scrollBar-wrapper {
+	width: 100%;
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	height: 1px;
+}
+
+#scrollBar-progress {
+	transition: all 500ms;
+	background-color: rgb(35, 36, 31);
+	width: 0%;
+	height: 1px;
+}
+
+#page-wrapper {
 	position: relative;
-	height: 170px;
-	width: 320px;
-	background-color: rgba(0,0,0,.15);
-	@include border-radius(85px);
-	.key-item {
-		position: absolute;
-		height: inherit;
-		width: 50%;
-		background-color: rgba(0,0,0,.25);
-		@include border-radius(50%);
-		&:hover {
-			cursor: pointer;
-		}
-	}
+	height: 100%;
+	width: 60%;
+	margin: 0 auto;
 }
 
-@keyframes upDownToggleFade {
-	0%, 100% {
-		transform: scale(1,1);
-		background-position: 0% 50%
-	} 
-	50% {
-		transform: scale(.9,.9);
-		background-position: 100% 50%
-	}
+#article-wrapper {
+	position: absolute;
+    width: 100%;
+    margin: 120px 0 200px;
 }
 
-#sphere {
-	height: 100px;
-	width: 100px;
-	background: linear-gradient(-45deg, #EE7752, #E73C7E, #23A6D5, #23D5AB);
-	background-size: 400% 400%;
-	transition: all 600ms;
-	overflow: hidden;
-	@extend %equal-display;
-	@include border-radius(50%);
-	&:hover {
-		animation: upDownToggleFade 3s infinite;
-		transition: all 600ms;
-		cursor: pointer;
-		&:after {
-			content: '#{$in}ed';
-		}
-	}
-	&:after {
-			content: '#{$in}me';
-		}
+#main-article {
+	width: 80%;
+	height: 100%;
+	margin: 0 auto;
 }
 
-.toggled {
-	right: 0;
-	background-color: #9FE1C3;
+h1 {
+	font-size: $fixed-size + px;
+	font-family: 'Panton-Bold';
+	color: rgb(34, 34, 34);
+}
+
+.article-paragraph {
+	margin-top: 40px;
+	margin-bottom: 40px;
 }

@@ -1,8 +1,11 @@
-var $getData = $('.key'),
-	$getChildren = $getData.children();
+$(window).scroll(function(){
+	var ratio = $(document).scrollTop() / (($(document).height() - $(window).height()) / 100);
+	$('#scrollBar-progress').width(ratio + '%');
+});
 
-	$getChildren.on({
-		click: function() {
-			$(this).toggleClass('toggled', 500);
-		}
-	});
+function copyDivToClipboard() {
+	var range = window.getSelection().getRangeAt(0);
+	range.selectNode(document.getElementById("codeToClipboard"));
+	window.getSelection().addRange(range);
+	document.execCommand("copy")
+}

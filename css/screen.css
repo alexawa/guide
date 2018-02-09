@@ -67,94 +67,72 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   display: block;
 }
 
-/* line 11, ../sass/screen.scss */
-html,
-body, #sphere {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+/*		Font Includes		*/
+@font-face {
+  font-family: 'Panton-Bold';
+  src: url("../fonts/Panton-Bold.otf") format("opentype");
 }
-
-/* line 25, ../sass/screen.scss */
+@font-face {
+  font-family: 'Panton-Light';
+  src: url("../fonts/Panton-Light.otf") format("opentype");
+}
+/* line 10, ../sass/screen.scss */
 html,
 body {
   margin: 0;
   padding: 0;
   font-family: Arial, serif;
-  font-size: 21.73913px;
   height: 100%;
 }
 
-/* line 36, ../sass/screen.scss */
-.key {
+/* line 19, ../sass/screen.scss */
+#scrollBar-wrapper {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  height: 1px;
+}
+
+/* line 27, ../sass/screen.scss */
+#scrollBar-progress {
+  transition: all 500ms;
+  background-color: #23241f;
+  width: 0%;
+  height: 1px;
+}
+
+/* line 34, ../sass/screen.scss */
+#page-wrapper {
   position: relative;
-  height: 170px;
-  width: 320px;
-  background-color: rgba(0, 0, 0, 0.15);
-  -webkit-border-radius: 85px;
-  -moz-border-radius: 85px;
-  -ms-border-radius: 85px;
-  -o-border-radius: 85px;
-  border-radius: 85px;
+  height: 100%;
+  width: 60%;
+  margin: 0 auto;
 }
-/* line 42, ../sass/screen.scss */
-.key .key-item {
+
+/* line 41, ../sass/screen.scss */
+#article-wrapper {
   position: absolute;
-  height: inherit;
-  width: 50%;
-  background-color: rgba(0, 0, 0, 0.25);
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  -ms-border-radius: 50%;
-  -o-border-radius: 50%;
-  border-radius: 50%;
-}
-/* line 48, ../sass/screen.scss */
-.key .key-item:hover {
-  cursor: pointer;
+  width: 100%;
+  margin: 120px 0 200px;
 }
 
-@keyframes upDownToggleFade {
-  0%, 100% {
-    transform: scale(1, 1);
-    background-position: 0% 50%;
-  }
-  50% {
-    transform: scale(0.9, 0.9);
-    background-position: 100% 50%;
-  }
-}
-/* line 65, ../sass/screen.scss */
-#sphere {
-  height: 100px;
-  width: 100px;
-  background: linear-gradient(-45deg, #EE7752, #E73C7E, #23A6D5, #23D5AB);
-  background-size: 400% 400%;
-  transition: all 600ms;
-  overflow: hidden;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  -ms-border-radius: 50%;
-  -o-border-radius: 50%;
-  border-radius: 50%;
-}
-/* line 74, ../sass/screen.scss */
-#sphere:hover {
-  animation: upDownToggleFade 3s infinite;
-  transition: all 600ms;
-  cursor: pointer;
-}
-/* line 78, ../sass/screen.scss */
-#sphere:hover:after {
-  content: "Hovered";
-}
-/* line 82, ../sass/screen.scss */
-#sphere:after {
-  content: "Hoverme";
+/* line 47, ../sass/screen.scss */
+#main-article {
+  width: 80%;
+  height: 100%;
+  margin: 0 auto;
 }
 
-/* line 87, ../sass/screen.scss */
-.toggled {
-  right: 0;
-  background-color: #9FE1C3;
+/* line 53, ../sass/screen.scss */
+h1 {
+  font-size: 50px;
+  font-family: 'Panton-Bold';
+  color: #222222;
+}
+
+/* line 59, ../sass/screen.scss */
+.article-paragraph {
+  margin-top: 40px;
+  margin-bottom: 40px;
 }
