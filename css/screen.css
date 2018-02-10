@@ -67,6 +67,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   display: block;
 }
 
+/*		Variable List		*/
 /*		Font Includes		*/
 @font-face {
   font-family: 'Panton-Bold';
@@ -85,7 +86,20 @@ body {
   height: 100%;
 }
 
-/* line 19, ../sass/screen.scss */
+/* line 18, ../sass/screen.scss */
+h1 {
+  font-size: 50px;
+  font-family: 'Panton-Bold';
+  color: #222222;
+}
+
+/* line 24, ../sass/screen.scss */
+h2 {
+  padding-bottom: 0.3em;
+  border-bottom: 1px solid #eaecef;
+}
+
+/* line 29, ../sass/screen.scss */
 #scrollBar-wrapper {
   width: 100%;
   position: fixed;
@@ -94,7 +108,7 @@ body {
   height: 1px;
 }
 
-/* line 27, ../sass/screen.scss */
+/* line 37, ../sass/screen.scss */
 #scrollBar-progress {
   transition: all 500ms;
   background-color: #23241f;
@@ -102,7 +116,7 @@ body {
   height: 1px;
 }
 
-/* line 34, ../sass/screen.scss */
+/* line 44, ../sass/screen.scss */
 #page-wrapper {
   position: relative;
   height: 100%;
@@ -110,29 +124,27 @@ body {
   margin: 0 auto;
 }
 
-/* line 41, ../sass/screen.scss */
+/* line 51, ../sass/screen.scss */
 #article-wrapper {
   position: absolute;
   width: 100%;
   margin: 120px 0 200px;
 }
 
-/* line 47, ../sass/screen.scss */
+/* line 57, ../sass/screen.scss */
 #main-article {
   width: 80%;
   height: 100%;
   margin: 0 auto;
 }
 
-/* line 53, ../sass/screen.scss */
-h1 {
-  font-size: 50px;
-  font-family: 'Panton-Bold';
-  color: #222222;
-}
-
-/* line 59, ../sass/screen.scss */
+/* line 63, ../sass/screen.scss */
 .article-paragraph {
   margin-top: 40px;
   margin-bottom: 40px;
+}
+
+/* line 69, ../sass/screen.scss */
+pre:hover {
+  cursor: pointer;
 }
