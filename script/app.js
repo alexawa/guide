@@ -23,3 +23,12 @@ function copyDivToClipboard() {
 	document.execCommand("copy");
 }
 /*		Блоки кода в буфер обмена		*/
+
+$(window).scroll(function() {    
+	var scroll = $(window).scrollTop();
+	if (scroll >= 200) {
+		$("header").addClass("toggled");
+	} else if(scroll < 200) {
+		$("header").removeClass("toggled");
+	}
+});

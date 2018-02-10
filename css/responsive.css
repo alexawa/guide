@@ -1,0 +1,59 @@
+/*		Variable List		*/
+/*		Font Includes		*/
+@font-face {
+  font-family: 'Panton-Bold';
+  src: url("../fonts/Panton-Bold.otf") format("opentype");
+}
+@font-face {
+  font-family: 'Panton-Light';
+  src: url("../fonts/Panton-Light.otf") format("opentype");
+}
+@font-face {
+  font-family: 'FontAwesome';
+  src: url("../css/fontawesome.min.css");
+}
+/*		Mixin Includes		*/
+@media only screen and (max-width: 480px) {
+  /* line 6, ../sass/responsive.scss */
+  header {
+    width: 100%;
+  }
+  /* line 8, ../sass/responsive.scss */
+  header .head-col-nav-bar-wrap {
+    width: 80%;
+    margin: 0 auto;
+    -webkit-display: flex;
+    -moz-display: flex;
+    -ms-display: flex;
+    -o-display: flex;
+    display: flex !important;
+    -webkit-justify-content: center;
+    -moz-justify-content: center;
+    -ms-justify-content: center;
+    -o-justify-content: center;
+    justify-content: center;
+    -ms-align-items: center;
+    align-items: center;
+  }
+
+  /* line 15, ../sass/responsive.scss */
+  #page-wrapper {
+    width: 90%;
+  }
+
+  /* line 19, ../sass/responsive.scss */
+  #main-article {
+    width: 100%;
+  }
+
+  /* line 23, ../sass/responsive.scss */
+  .foot-col-nav-bar {
+    margin-top: 200px;
+  }
+  /* line 26, ../sass/responsive.scss */
+  .foot-col-nav-bar .foot-col-item {
+    width: 100%;
+    padding: 15px 30px;
+    text-align: center;
+  }
+}

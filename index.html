@@ -6,6 +6,7 @@
 	<title>Разработчикам</title>
 	<link rel="stylesheet" href="css/screen.css">
 	<link rel="stylesheet" href="css/stylization.css">
+	<link rel="stylesheet" href="css/responsive.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 	<link rel="stylesheet" href="css/monokai-sublime.css">
 	<link rel="stylesheet" href="css/fontawesome.min.css">
@@ -16,10 +17,22 @@
 		<div id="scrollBar-progress"></div>
 	</div>
 
+	<header>
+		<div class="head-col-nav-bar-wrap">
+			<ul class="head-col-nav-bar" style="margin-bottom: 0">
+				<li class="foot-col-item">Как подойти к изучению?</li>
+				<li class="foot-col-item">Руководство по jQuery</li>
+				<li class="foot-col-item">Руководство по Git</li>
+				<li class="foot-col-item">Дополнительная информация</li>
+			</ul>
+		</div>	
+	</header>
+
 	<div id="page-wrapper">
 		<div id="article-wrapper">
 			<article id="main-article">
 				<h1>Привет, разработчик!</h1>
+				<p>I know – I share. I share – I care.</p>
 
 				<p class="article-paragraph">
 					Мы получаем удовольствие от создания качественных приложений и стремимся к достижению новых высот. Наша цель – предоставить пользователям возможность обучения с высоким уровнем комфорта!
@@ -32,12 +45,99 @@
 				</p>
 
 
-				<h2>Вот так выглядит код:</h2>
+				<h2>Как подойти к изучению?</h2>
+
+				<p class="article-paragraph">
+					Начать вы можете с самых простых вещей. Все ведущие разработчики начинали с малого, а что касается нашей тематики – Frontend разработки, то отправной точкой станет освоение профессии "Верстальщик". Мы не навязываем свою точку зрения, предлагая хорошую альтернативу для быстрого старта и продкуктивного обучения.
+				</p>
+
+				<p class="article-paragraph">
+					Мы хотим поделиться с вами кодом этой страницы, запрещая его использование только в коммерческих целях. Всё что нужно сделать для его получения – прописать в вашем Git Bash`e следующие команды:
+				</p>
+
+				<pre onclick="copyDivToClipboard()" id="codeToClipboard">
+					<code class="git">
+cd Desktop						
+$git clone https://github.com/alexawa/guide.git godlandDev
+$git commit -m 'initial project version'
+			</code></pre>
+
+				<p class="article-paragraph">
+					После этого, на вашем рабочем столе будет создан новый локальный репозиторий godlandDev.
+
+					Все стили, скрипты, библиотеки.. короче говоря всё комплектующее и прочее находится там внутри. Изучите семантику кода, попробуйте добавить что-то своё. Если ничего не приходит в голову – напишите нам в Службу технической поддержки и мы пришлём вам задание!
+				</p>
+
+				<h2>Руководство по jQuery:</h2>
 
 				<p class="article-paragraph">
 					Именно поэтому, все наши новые разработки, библиотеки и фреймворки находятся в Open Source доступе, при котором каждый разработчик может получить к ним доступ в любой момент. 
 
 					Мы пошли на этот шаг, дабы каждый начинающий разработчик мог получить бесплатный доступ к материалу и поддтолкнуть общество к изучению программироваия с уклоном на Web разработку.
+				</p>
+
+				<pre onclick="copyDivToClipboard()" id="codeToClipboard">
+					<code class="jquery">
+$(window).scroll(function() {    
+	var scroll = $(window).scrollTop();
+	if (scroll >= 200) {
+		$("header").addClass("toggled");
+	} else if(scroll < 200) {
+		$("header").removeClass("toggled");
+	}
+});
+			</code></pre>
+
+			<p class="article-paragraph">
+					Именно поэтому, все наши новые разработки, библиотеки и фреймворки находятся в Open Source доступе, при котором каждый разработчик может получить к ним доступ в любой момент. 
+
+					Мы пошли на этот шаг, дабы каждый начинающий разработчик мог получить бесплатный доступ к материалу и поддтолкнуть общество к изучению программироваия с уклоном на Web разработку.
+				</p>
+
+				<h2>Руководство по Git`y:</h2>
+
+				<p class="article-paragraph">
+					Начать вы можете с самых простых вещей. Все ведущие разработчики начинали с малого, а что касается нашей тематики – Frontend разработки, то отправной точкой станет освоение профессии "Верстальщик". Мы не навязываем свою точку зрения, предлагая хорошую альтернативу для быстрого старта и продкуктивного обучения.
+				</p>
+
+				<p class="article-paragraph">
+					Мы хотим поделиться с вами кодом этой страницы, запрещая его использование только в коммерческих целях. Всё что нужно сделать для его получения – прописать в вашем Git Bash`e следующие команды:
+				</p>
+
+				<pre onclick="copyDivToClipboard()" id="codeToClipboard">
+					<code class="git">
+cd Desktop						
+$git clone https://github.com/alexawa/guide.git godlandDev
+$git commit -m 'initial project version'
+			</code></pre>
+
+				<p class="article-paragraph">
+					После этого, на вашем рабочем столе будет создан новый локальный репозиторий godlandDev.
+
+					Все стили, скрипты, библиотеки.. короче говоря всё комплектующее и прочее находится там внутри. Изучите семантику кода, попробуйте добавить что-то своё. Если ничего не приходит в голову – напишите нам в Службу технической поддержки и мы пришлём вам задание!
+				</p>
+
+				<h2>Дополнительная информация:</h2>
+
+				<p class="article-paragraph">
+					Начать вы можете с самых простых вещей. Все ведущие разработчики начинали с малого, а что касается нашей тематики – Frontend разработки, то отправной точкой станет освоение профессии "Верстальщик". Мы не навязываем свою точку зрения, предлагая хорошую альтернативу для быстрого старта и продкуктивного обучения.
+				</p>
+
+				<p class="article-paragraph">
+					Мы хотим поделиться с вами кодом этой страницы, запрещая его использование только в коммерческих целях. Всё что нужно сделать для его получения – прописать в вашем Git Bash`e следующие команды:
+				</p>
+
+				<pre onclick="copyDivToClipboard()" id="codeToClipboard">
+					<code class="git">
+cd Desktop						
+$git clone https://github.com/alexawa/guide.git godlandDev
+$git commit -m 'initial project version'
+			</code></pre>
+
+				<p class="article-paragraph">
+					После этого, на вашем рабочем столе будет создан новый локальный репозиторий godlandDev.
+
+					Все стили, скрипты, библиотеки.. короче говоря всё комплектующее и прочее находится там внутри. Изучите семантику кода, попробуйте добавить что-то своё. Если ничего не приходит в голову – напишите нам в Службу технической поддержки и мы пришлём вам задание!
 				</p>
 
 				<pre onclick="copyDivToClipboard()" id="codeToClipboard">
@@ -58,18 +158,16 @@ mainObject.mainMethod();
 	
 			<footer>
 				<ul class="foot-col-nav-bar" style="margin-bottom: 0">
-					<li class="foot-col-item">item1</li>
-					<li class="foot-col-item">item2</li>
+					<li class="foot-col-item">Документация</li>
+					<li class="foot-col-item">Правила</li>
 					<li class="foot-col-item"><i class="fab fa-github"></i></li>
-					<li class="foot-col-item">item4</li>
-					<li class="foot-col-item">item5</li>
+					<li class="foot-col-item">Форум</li>
+					<li class="foot-col-item">Поддержка</li>
 				</ul>
 			</footer>
 			</article>
 		</div>
 	</div>
-
-	
 	
 	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>

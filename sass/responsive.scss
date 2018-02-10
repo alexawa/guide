@@ -1,0 +1,32 @@
+@import "variables.scss";
+@import "includes.scss";
+
+@media only screen and (max-width : 480px) {
+	
+	header {
+		width: 100%;
+		& .head-col-nav-bar-wrap {
+		width: 80%;
+		margin: 0 auto;
+		@include initialDisplay(flex, center, center);
+	}
+	}
+
+	#page-wrapper {
+		width: 90%;	
+	}
+
+	#main-article {
+		width: 100%;
+	}
+
+	.foot-col-nav-bar {
+		margin-top: 200px;
+
+		.foot-col-item {
+			width: 100%;
+			padding: 15px 30px;
+			text-align: center;
+		}
+	}
+}
