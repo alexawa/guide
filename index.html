@@ -5,9 +5,10 @@
 	<meta name="viewport" content="initial-scale=1, user-scalable=no" />
 	<title>Разработчикам</title>
 	<link rel="stylesheet" href="css/screen.css">
-	<link href="https://fonts.googleapis.com/css?family=PT+Serif:400,700&amp;subset=cyrillic" rel="stylesheet">
+	<link rel="stylesheet" href="css/stylization.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 	<link rel="stylesheet" href="css/monokai-sublime.css">
+	<link rel="stylesheet" href="css/fontawesome.min.css">
 </head>
 <body>
 
@@ -32,6 +33,13 @@
 
 
 				<h2>Вот так выглядит код:</h2>
+
+				<p class="article-paragraph">
+					Именно поэтому, все наши новые разработки, библиотеки и фреймворки находятся в Open Source доступе, при котором каждый разработчик может получить к ним доступ в любой момент. 
+
+					Мы пошли на этот шаг, дабы каждый начинающий разработчик мог получить бесплатный доступ к материалу и поддтолкнуть общество к изучению программироваия с уклоном на Web разработку.
+				</p>
+
 				<pre onclick="copyDivToClipboard()" id="codeToClipboard">
 					<code class="js">
 var mainObject = {
@@ -41,13 +49,22 @@ var mainObject = {
 	'javascript'
 	],
 	mainMethod: function() {
-		console.log(this.mainProp.arr);
+	console.log(this.mainProp.arr);
 	}
 };
 
 mainObject.mainMethod();
 			</code></pre>
-
+	
+			<footer>
+				<ul class="foot-col-nav-bar" style="margin-bottom: 0">
+					<li class="foot-col-item">item1</li>
+					<li class="foot-col-item">item2</li>
+					<li class="foot-col-item"><i class="fab fa-github"></i></li>
+					<li class="foot-col-item">item4</li>
+					<li class="foot-col-item">item5</li>
+				</ul>
+			</footer>
 			</article>
 		</div>
 	</div>
@@ -58,7 +75,6 @@ mainObject.mainMethod();
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 	<script src="script/highlight.pack.js"></script>
-	<script>hljs.initHighlightingOnLoad();</script>
 	<script src="script/app.js"></script>
 </body>
 </html>

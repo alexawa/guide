@@ -7,3 +7,8 @@
   font-family: 'Panton-Light';
   src: url("../fonts/Panton-Light.otf") format("opentype");
 }
+@font-face {
+  font-family: 'FontAwesome';
+  src: url("../css/fontawesome.min.css");
+}
+/*		Mixin Includes		*/

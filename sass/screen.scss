@@ -17,7 +17,6 @@ body {
 
 h1 {
 	font-size: $fixed-size + px;
-	font-family: 'Panton-Bold';
 	color: rgb(34, 34, 34);
 }
 
@@ -36,7 +35,7 @@ h2 {
 
 #scrollBar-progress {
 	transition: all 500ms;
-	background-color: rgb(35, 36, 31);
+	background-color: #f92672;
 	width: 0%;
 	height: 1px;
 }
@@ -51,7 +50,7 @@ h2 {
 #article-wrapper {
 	position: absolute;
     width: 100%;
-    margin: 120px 0 200px;
+    margin: 120px 0 0;
 }
 
 #main-article {
@@ -68,5 +67,30 @@ h2 {
 pre {
 	&:hover {
 		cursor: pointer;
+	}
+}
+
+footer {
+	height: 110px;
+	border-top: 1px solid #e7e8ec;
+	@include initialDisplay(flex, center, center);
+}
+
+.foot-col-nav-bar {
+	& * i {
+		font-family: FontAwesome;
+		font-size: $fixed-size / 2 + px;
+	}
+}
+
+.foot-col-item {
+	list-style-type: none;
+	float: left;
+	padding: 10px 50px;
+	@include initialTransition(201ms);
+	&:hover {
+		cursor: pointer;
+		@include initialScaling(scale(1.1));
+		@include initialTransition(201ms);
 	}
 }

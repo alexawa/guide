@@ -1,0 +1,34 @@
+/*		Font Includes		*/
+@font-face {
+  font-family: 'Panton-Bold';
+  src: url("../fonts/Panton-Bold.otf") format("opentype");
+}
+@font-face {
+  font-family: 'Panton-Light';
+  src: url("../fonts/Panton-Light.otf") format("opentype");
+}
+@font-face {
+  font-family: 'FontAwesome';
+  src: url("../css/fontawesome.min.css");
+}
+/*		Mixin Includes		*/
+/* line 4, ../sass/stylization.scss */
+body::-webkit-scrollbar {
+  width: 4px;
+}
+
+/* line 8, ../sass/stylization.scss */
+body::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+/* line 12, ../sass/stylization.scss */
+body::-webkit-scrollbar-thumb {
+  background-color: #f92672;
+  height: 15px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  border-radius: 10px;
+}
