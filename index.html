@@ -4,12 +4,14 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="initial-scale=1, user-scalable=no" />
 	<title>Разработчикам</title>
+	<link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
 	<link rel="stylesheet" href="css/screen.css">
 	<link rel="stylesheet" href="css/stylization.css">
 	<link rel="stylesheet" href="css/responsive.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 	<link rel="stylesheet" href="css/monokai-sublime.css">
 	<link rel="stylesheet" href="css/fontawesome.min.css">
+
 </head>
 <body>
 
@@ -20,10 +22,10 @@
 	<header>
 		<div class="head-col-nav-bar-wrap">
 			<ul class="head-col-nav-bar" style="margin-bottom: 0">
-				<li class="foot-col-item">Как подойти к изучению?</li>
-				<li class="foot-col-item">Руководство по jQuery</li>
-				<li class="foot-col-item">Руководство по Git</li>
-				<li class="foot-col-item">Дополнительная информация</li>
+				<a href="#how-to"><li class="foot-col-item">Как подойти к изучению?</li></a>
+				<a href="#j-qw"><li class="foot-col-item">Руководство по jQuery</li></a>
+				<a href="#g-t"><li class="foot-col-item">Руководство по Git</li></a>
+				<a href="#add-i"><li class="foot-col-item">Дополнительная информация</li></a>
 			</ul>
 		</div>	
 	</header>
@@ -44,29 +46,34 @@
 					Мы пошли на этот шаг, дабы каждый начинающий разработчик мог получить бесплатный доступ к материалу и поддтолкнуть общество к изучению программироваия с уклоном на Web разработку.
 				</p>
 
+				<div id="how-to"></div>
+				<section class="pg-sect">
+					<h2>Как подойти к изучению?</h2>
 
-				<h2>Как подойти к изучению?</h2>
+					<p class="article-paragraph">
+						Начать вы можете с самых простых вещей. Все ведущие разработчики начинали с малого, а что касается нашей тематики – Frontend разработки, то отправной точкой станет освоение профессии "Верстальщик". Мы не навязываем свою точку зрения, предлагая хорошую альтернативу для быстрого старта и продкуктивного обучения.
+					</p>
 
-				<p class="article-paragraph">
-					Начать вы можете с самых простых вещей. Все ведущие разработчики начинали с малого, а что касается нашей тематики – Frontend разработки, то отправной точкой станет освоение профессии "Верстальщик". Мы не навязываем свою точку зрения, предлагая хорошую альтернативу для быстрого старта и продкуктивного обучения.
-				</p>
+					<p class="article-paragraph">
+						Мы хотим поделиться с вами кодом этой страницы, запрещая его использование только в коммерческих целях. Всё что нужно сделать для его получения – прописать в вашем Git Bash`e следующие команды:
+					</p>
 
-				<p class="article-paragraph">
-					Мы хотим поделиться с вами кодом этой страницы, запрещая его использование только в коммерческих целях. Всё что нужно сделать для его получения – прописать в вашем Git Bash`e следующие команды:
-				</p>
-
-				<pre onclick="copyDivToClipboard()" id="codeToClipboard">
-					<code class="git">
+					<pre onclick="copyDivToClipboard()" id="codeToClipboard">
+						<code class="git">
 cd Desktop						
 $git clone https://github.com/alexawa/guide.git godlandDev
 $git commit -m 'initial project version'
 			</code></pre>
 
-				<p class="article-paragraph">
-					После этого, на вашем рабочем столе будет создан новый локальный репозиторий godlandDev.
+			<p class="article-paragraph">
+				После этого, на вашем рабочем столе будет создан новый локальный репозиторий godlandDev.
 
-					Все стили, скрипты, библиотеки.. короче говоря всё комплектующее и прочее находится там внутри. Изучите семантику кода, попробуйте добавить что-то своё. Если ничего не приходит в голову – напишите нам в Службу технической поддержки и мы пришлём вам задание!
-				</p>
+				Все стили, скрипты, библиотеки.. короче говоря всё комплектующее и прочее находится там внутри. Изучите семантику кода, попробуйте добавить что-то своё. Если ничего не приходит в голову – напишите нам в Службу технической поддержки и мы пришлём вам задание!
+			</p>
+		</section>
+	
+		<div id="j-qw"></div>
+		<section class="pg-sect">	
 
 				<h2>Руководство по jQuery:</h2>
 
@@ -76,7 +83,7 @@ $git commit -m 'initial project version'
 					Мы пошли на этот шаг, дабы каждый начинающий разработчик мог получить бесплатный доступ к материалу и поддтолкнуть общество к изучению программироваия с уклоном на Web разработку.
 				</p>
 
-				<pre onclick="copyDivToClipboard()" id="codeToClipboard">
+				<pre>
 					<code class="jquery">
 $(window).scroll(function() {    
 	var scroll = $(window).scrollTop();
@@ -94,6 +101,11 @@ $(window).scroll(function() {
 					Мы пошли на этот шаг, дабы каждый начинающий разработчик мог получить бесплатный доступ к материалу и поддтолкнуть общество к изучению программироваия с уклоном на Web разработку.
 				</p>
 
+			</section>
+
+			<div id="g-t"></div>
+			<section class="pg-sect">
+
 				<h2>Руководство по Git`y:</h2>
 
 				<p class="article-paragraph">
@@ -104,7 +116,7 @@ $(window).scroll(function() {
 					Мы хотим поделиться с вами кодом этой страницы, запрещая его использование только в коммерческих целях. Всё что нужно сделать для его получения – прописать в вашем Git Bash`e следующие команды:
 				</p>
 
-				<pre onclick="copyDivToClipboard()" id="codeToClipboard">
+				<pre>
 					<code class="git">
 cd Desktop						
 $git clone https://github.com/alexawa/guide.git godlandDev
@@ -116,6 +128,11 @@ $git commit -m 'initial project version'
 
 					Все стили, скрипты, библиотеки.. короче говоря всё комплектующее и прочее находится там внутри. Изучите семантику кода, попробуйте добавить что-то своё. Если ничего не приходит в голову – напишите нам в Службу технической поддержки и мы пришлём вам задание!
 				</p>
+
+			</section>
+
+			<div id="add-i"></div>
+			<section class="pg-sect">
 
 				<h2>Дополнительная информация:</h2>
 
@@ -123,11 +140,33 @@ $git commit -m 'initial project version'
 					Начать вы можете с самых простых вещей. Все ведущие разработчики начинали с малого, а что касается нашей тематики – Frontend разработки, то отправной точкой станет освоение профессии "Верстальщик". Мы не навязываем свою точку зрения, предлагая хорошую альтернативу для быстрого старта и продкуктивного обучения.
 				</p>
 
+	<div class="carousel carousel-slider center" data-indicators="true">
+    <div class="carousel-fixed-item center">
+      <a class="btn waves-effect white grey-text darken-text-2">button</a>
+    </div>
+    <div class="carousel-item red white-text" href="#one!">
+      <h2>First Panel</h2>
+      <p class="white-text">This is your first panel</p>
+    </div>
+    <div class="carousel-item amber white-text" href="#two!">
+      <h2>Second Panel</h2>
+      <p class="white-text">This is your second panel</p>
+    </div>
+    <div class="carousel-item green white-text" href="#three!">
+      <h2>Third Panel</h2>
+      <p class="white-text">This is your third panel</p>
+    </div>
+    <div class="carousel-item blue white-text" href="#four!">
+      <h2>Fourth Panel</h2>
+      <p class="white-text">This is your fourth panel</p>
+    </div>
+  </div>
+
 				<p class="article-paragraph">
 					Мы хотим поделиться с вами кодом этой страницы, запрещая его использование только в коммерческих целях. Всё что нужно сделать для его получения – прописать в вашем Git Bash`e следующие команды:
 				</p>
 
-				<pre onclick="copyDivToClipboard()" id="codeToClipboard">
+				<pre>
 					<code class="git">
 cd Desktop						
 $git clone https://github.com/alexawa/guide.git godlandDev
@@ -140,7 +179,7 @@ $git commit -m 'initial project version'
 					Все стили, скрипты, библиотеки.. короче говоря всё комплектующее и прочее находится там внутри. Изучите семантику кода, попробуйте добавить что-то своё. Если ничего не приходит в голову – напишите нам в Службу технической поддержки и мы пришлём вам задание!
 				</p>
 
-				<pre onclick="copyDivToClipboard()" id="codeToClipboard">
+				<pre>
 					<code class="js">
 var mainObject = {
 	mainProp: arr = [
@@ -155,6 +194,8 @@ var mainObject = {
 
 mainObject.mainMethod();
 			</code></pre>
+
+		</section>
 	
 			<footer>
 				<ul class="foot-col-nav-bar" style="margin-bottom: 0">
@@ -169,7 +210,8 @@ mainObject.mainMethod();
 		</div>
 	</div>
 	
-	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+		<script src="script/materialize.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 	<script src="script/highlight.pack.js"></script>

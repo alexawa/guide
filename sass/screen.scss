@@ -11,6 +11,10 @@
 	color: rgba(117, 117, 117, 0.5);
 }
 
+section {
+	
+}
+
 html,
 body {
 	margin: 0;
@@ -55,8 +59,12 @@ header {
 	opacity: 1;
 	min-height: 70px;
 	background-color: rgb(250, 250, 250);
-	color: #f92672;
+	
 	@include initialTransition(340ms);
+}
+
+.currant {
+	color: #f92672;
 }
 
 #scrollBar-wrapper {

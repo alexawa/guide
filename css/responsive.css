@@ -13,12 +13,24 @@
   src: url("../css/fontawesome.min.css");
 }
 /*		Mixin Includes		*/
-@media only screen and (max-width: 480px) {
-  /* line 6, ../sass/responsive.scss */
+@media only screen and (min-width: 669px) and (max-width: 1723px) {
+  /* line 5, ../sass/responsive.scss */
+  .head-col-nav-bar * li {
+    list-style: none;
+    float: left;
+    text-align: center;
+    width: 16.6667%;
+    /* fallback for non-calc() browsers */
+    width: calc(100% / 4);
+    box-sizing: border-box;
+  }
+}
+@media only screen and (max-width: 660px) {
+  /* line 17, ../sass/responsive.scss */
   header {
     width: 100%;
   }
-  /* line 8, ../sass/responsive.scss */
+  /* line 19, ../sass/responsive.scss */
   header .head-col-nav-bar-wrap {
     width: 80%;
     margin: 0 auto;
@@ -36,21 +48,21 @@
     align-items: center;
   }
 
-  /* line 15, ../sass/responsive.scss */
+  /* line 26, ../sass/responsive.scss */
   #page-wrapper {
     width: 90%;
   }
 
-  /* line 19, ../sass/responsive.scss */
+  /* line 30, ../sass/responsive.scss */
   #main-article {
     width: 100%;
   }
 
-  /* line 23, ../sass/responsive.scss */
+  /* line 34, ../sass/responsive.scss */
   .foot-col-nav-bar {
     margin-top: 200px;
   }
-  /* line 26, ../sass/responsive.scss */
+  /* line 37, ../sass/responsive.scss */
   .foot-col-nav-bar .foot-col-item {
     width: 100%;
     padding: 15px 30px;

@@ -1,7 +1,18 @@
 @import "variables.scss";
 @import "includes.scss";
 
-@media only screen and (max-width : 480px) {
+@media only screen and (min-width : 669px) and (max-width : 1723px) {
+	.head-col-nav-bar * li {
+	list-style: none;
+    float: left;
+    text-align: center;
+    width: 16.6667%; /* fallback for non-calc() browsers */
+    width: calc(100% / 4);
+    box-sizing: border-box;
+	}
+}
+
+@media only screen and (max-width : 660px) {
 	
 	header {
 		width: 100%;
